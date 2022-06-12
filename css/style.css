@@ -30,13 +30,30 @@ ul {
   list-style-type: none;
 }
 
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 20px;
+}
+
+.active {
+  color: var(--secondary-color);
+}
+
 /* Header */
 
 .navbar-main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: 85px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--primary-color);
 }
 
 .navbar ul {
@@ -82,11 +99,42 @@ ul {
 
 .arrow-down {
   color: var(--opaque-color);
-  font-size: 2.5em;
-  margin-top: 150px;
+  font-size: 3.5em;
+  margin-top: 225px;
 }
 
 .arrow-down:hover {
   transition: 500ms ease-in-out;
   color: #fff;
+}
+
+/* About */
+
+.about-me-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me-main h3 {
+  margin-top: 85px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.about-me-main img {
+  width: 250px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+.about-me-main p:nth-child(3) {
+  width: 70%;
+  margin: 40px 0;
+}
+
+.about-me-main p:nth-child(4) {
+  margin-bottom: 500px;
 }
