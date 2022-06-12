@@ -1,0 +1,92 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #00c968;
+  --opaque-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: var(--primary-color);
+}
+
+body {
+  font-family: "Poppins", arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header */
+
+.navbar-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+  color: var(--secondary-color);
+  transition: 0.3s ease-in-out;
+}
+
+/* Showcase */
+
+.showcase-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background: radial-gradient(transparent, black), url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(50%);
+}
+
+.showcase-main h2 {
+  font-size: 5em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.showcase-main p {
+  font-size: 1.4em;
+  font-weight: 100;
+}
+
+.arrow-down {
+  color: var(--opaque-color);
+  font-size: 2.5em;
+  margin-top: 150px;
+}
+
+.arrow-down:hover {
+  transition: 500ms ease-in-out;
+  color: #fff;
+}
