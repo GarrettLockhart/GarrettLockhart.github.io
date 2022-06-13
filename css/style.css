@@ -1,10 +1,10 @@
+/* Global styles */
+
 :root {
   --primary-color: #000000;
   --secondary-color: #00c968;
   --opaque-color: rgba(255, 255, 255, 0.5);
 }
-
-/* Global styles */
 
 * {
   box-sizing: border-box;
@@ -19,6 +19,7 @@ html {
 body {
   font-family: "Poppins", arial, helvetica, sans-serif;
   color: #fff;
+  line-height: 1.6;
 }
 
 a {
@@ -54,6 +55,10 @@ p {
   top: 0;
   z-index: 100;
   background-color: var(--primary-color);
+}
+
+.navbar-main a img {
+  height: 65px;
 }
 
 .navbar ul {
@@ -95,6 +100,7 @@ p {
 .showcase-main p {
   font-size: 1.4em;
   font-weight: 100;
+  margin-top: 15px;
 }
 
 .arrow-down {
