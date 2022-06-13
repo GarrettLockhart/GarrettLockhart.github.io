@@ -12,5 +12,5 @@
     WIP
     <br />
     <br />
-    <a href="https://garrettlockhart.github.io/">View Demo</a>
+    <a href="https://garrettlockhart.github.io/" target="_blank">View Demo</a>
 </div>
