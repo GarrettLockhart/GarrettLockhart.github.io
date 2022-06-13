@@ -31,7 +31,7 @@ ul {
 }
 
 .container {
-  width: 1100px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -136,5 +136,66 @@ p {
 }
 
 .about-me-main p:nth-child(4) {
-  margin-bottom: 500px;
+  margin-bottom: 200px;
+}
+
+/* Work */
+
+.work-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+.work-header h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.work-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+  gap: 25px;
+}
+
+.grid-box {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.card-caption {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding-top: 10px;
+  background: #000000;
+  background: -webkit-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.8)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/GarrettLockhart/Horiseon-refractor">
+  <a href="https://github.com/GarrettLockhart/GarrettLockhart.github.io">
     GitHub Repo
   </a>
 
@@ -12,5 +12,5 @@
     WIP
     <br />
     <br />
-    <a href="#">View Demo</a>
+    <a href="https://garrettlockhart.github.io/">View Demo</a>
 </div>
