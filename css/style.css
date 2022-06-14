@@ -1,9 +1,9 @@
 /* Global styles */
 
 :root {
-  --primary-color: #000000;
-  --secondary-color-light: #fff;
-  --secondary-color: #00989b;
+  --primary-color: #eeeeee;
+  --secondary-color: #000000;
+  --accent-color: #004e4f;
   --opaque-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -47,6 +47,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: var(--primary-color);
+  color: var();
 }
 
 /* A elements that don't have a class get default styles */
@@ -83,11 +85,12 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--secondary-color-light);
+  color: var(--secondary-color);
 }
 
 .active {
-  color: var(--secondary-color);
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 /* Header */
@@ -100,7 +103,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--primary-color);
+  background-color: #ddd;
 }
 
 .navbar-main a img {
@@ -131,10 +134,11 @@ a {
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background: radial-gradient(transparent, black), url(../images/hero-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../images/hero-bg.jpg);
   background-size: cover;
   background-position: center;
-  color: var(--secondary-color-light);
+  color: #fff;
 }
 
 .showcase-main h2 {
@@ -171,7 +175,7 @@ a {
 }
 
 .about-me-main h3 {
-  margin-top: 85px;
+  margin-top: 65px;
   margin-bottom: 20px;
   font-size: 2em;
 }
@@ -259,8 +263,8 @@ a {
 }
 
 .card-content {
-  background-color: var(--secondary-color-light);
-  color: var(--primary-color);
+  background-color: #fff;
+  color: var(--secondary-color);
   align-self: end;
   padding: 0.5rem;
   text-align: center;
