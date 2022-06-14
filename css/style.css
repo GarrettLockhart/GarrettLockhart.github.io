@@ -69,26 +69,11 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /* =================================================================*/
 
 .container {
   width: 80%;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -209,9 +194,10 @@ a {
 }
 
 .tech-stack {
-  margin: 100px;
+  margin: 100px 20px;
   display: flex;
   justify-content: space-between;
+  flex-flow: row wrap;
   font-size: 5rem;
 }
 
@@ -241,6 +227,7 @@ a {
 
 .card-container {
   width: 80%;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -254,7 +241,6 @@ a {
 
 .card {
   border-radius: 6px;
-  aspect-ratio: 1 / 1;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
@@ -284,10 +270,19 @@ a {
 
 .card-title {
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
 }
 
 .card-description {
   font-size: 1.05rem;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 960px) {
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+  }
 }
