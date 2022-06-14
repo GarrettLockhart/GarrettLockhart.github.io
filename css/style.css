@@ -3,34 +3,89 @@
 :root {
   --primary-color: #000000;
   --secondary-color-light: #fff;
-  --secondary-color: #009e52;
+  --secondary-color: #00989b;
   --opaque-color: rgba(255, 255, 255, 0.5);
 }
 
-* {
+/* CSS style reset by https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
-html {
-  background-color: var(--secondary-color-light);
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
-  font-family: "Poppins", arial, helvetica, sans-serif;
-  color: var(--primary-color);
-  line-height: 1.6;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-ul {
-  list-style-type: none;
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =================================================================*/
 
 .container {
   width: 80%;
@@ -41,16 +96,13 @@ p {
   font-size: 20px;
 }
 
-.active {
-  color: var(--secondary-color);
+a {
+  text-decoration: none;
+  color: var(--secondary-color-light);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-  padding: 0;
+.active {
+  color: var(--secondary-color);
 }
 
 /* Header */
@@ -179,73 +231,57 @@ h4 {
 
 /* Cards */
 
-.grid-container {
+.stacked {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(250px, auto);
-  gap: 10px;
-  width: 100%;
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card-container {
+  width: 80%;
   margin: 0 auto;
 }
 
-.grid-box {
-  background-color: #000;
-  position: relative;
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 20px;
 }
 
-.grid-box1 {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
-  position: relative;
+.card {
+  border-radius: 6px;
+  aspect-ratio: 1 / 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.grid-box > img {
+.card-img {
+  width: 100%;
+  aspect-ratio: 1 / 0.75;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
-.grid-box h4 {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+.card-content {
+  background-color: var(--secondary-color-light);
+  color: var(--primary-color);
+  align-self: end;
+  padding: 0.5rem;
   text-align: center;
-  color: var(--secondary-color-light);
-  background-color: var(--primary-color);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
-.grid-box p {
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  color: var(--secondary-color-light);
-  background-color: var(--primary-color);
+.card-title {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
-.grid-box1 h4 {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  color: var(--secondary-color-light);
-  font-size: 2rem;
-  background-color: var(--primary-color);
-}
-
-.grid-box1 p {
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  color: var(--secondary-color-light);
-  background-color: var(--primary-color);
+.card-description {
+  font-size: 1.05rem;
 }
