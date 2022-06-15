@@ -1,10 +1,10 @@
 /* Global styles */
 
 :root {
-  --primary-color: #eeeeee;
+  --primary-color: #fbfbfb;
   --secondary-color: #000000;
-  --accent-color: #004e4f;
-  --opaque-color: rgba(255, 255, 255, 0.5);
+  --accent-color: #10999C;
+  --opaque-color: rgba(255, 255, 255, 0.7);
 }
 
 /* CSS style reset by https://piccalil.li/blog/a-modern-css-reset/ */
@@ -47,7 +47,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  background-color: var(--primary-color);
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%);
   color: var();
 }
 
@@ -88,6 +89,15 @@ a {
   color: var(--secondary-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2rem;
+}
+
 .active {
   color: var(--accent-color);
   border-bottom: 2px solid var(--secondary-color);
@@ -103,7 +113,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #ddd;
+  background-color: var(--secondary-color)
 }
 
 .navbar-main a img {
@@ -119,10 +129,11 @@ a {
 
 .navbar ul li a {
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 .navbar ul li a:hover {
-  color: var(--secondary-color);
+  color: var(--accent-color);
   transition: 0.3s ease-in-out;
 }
 
@@ -151,6 +162,8 @@ a {
   font-size: 1.4em;
   font-weight: 100;
   margin-top: 15px;
+  font-weight: bold;
+  color: var(--opaque-color);
 }
 
 .arrow-down {
@@ -166,6 +179,14 @@ a {
 
 /* About */
 
+.about-me-header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
 .about-me-main {
   display: flex;
   flex-direction: column;
@@ -175,7 +196,6 @@ a {
 }
 
 .about-me-main h3 {
-  margin-top: 65px;
   margin-bottom: 20px;
   font-size: 2em;
 }
@@ -184,25 +204,26 @@ a {
   width: 250px;
   border-radius: 50%;
   border: 4px solid var(--secondary-color);
+  margin-bottom: 50px;
 }
 
-.about-me-main p:nth-child(3) {
-  width: 70%;
-  margin: 40px 0;
+.about-me-main p {
+  margin-bottom: 50px;
 }
 
-.about-me-main h4:nth-child(4) {
+.about-me-main h4 {
   font-size: 2rem;
-  margin: 0;
+  margin-bottom: 10px;
   padding: 0;
 }
 
 .tech-stack {
-  margin: 30px 20px 100px 20px;
+  margin: 50px 0;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
   font-size: 5rem;
+
 }
 
 /* Work header */
@@ -211,8 +232,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75px;
-  margin-bottom: 75px;
+  height: 100px;
+  margin-bottom: 50px;
 }
 
 .work-header h3 {
@@ -241,6 +262,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
   gap: 20px;
+  padding-bottom: 100px;
 }
 
 .card {
@@ -281,11 +303,49 @@ a {
   font-size: 1.05rem;
 }
 
-/* Responsive */
+/* Passion */
 
-@media screen and (max-width: 960px) {
-  .work-grid {
-    display: grid;
-    grid-template-columns: repeat(2 1fr);
-  }
+.passion-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.passion-main-container {
+  display: flex;
+  flex: 1;
+  height: 500px;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+}
+
+.passion-image {
+  width: 250px;
+  border-radius: 25%;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content-container i {
+  font-size: 5rem;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+}
+
+.passion-content h4 {
+  margin-bottom: 20px;
+}
+
+.passion-content p {
+  padding: 10px;
 }
