@@ -132,7 +132,7 @@ h6 {
 .navbar ul li a {
   text-transform: uppercase;
   color: var(--primary-color);
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .navbar ul li a:hover {
