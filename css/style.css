@@ -71,7 +71,6 @@ picture {
 /* Inherit fonts for inputs and buttons */
 input,
 button,
-textarea,
 select {
   font: inherit;
 }
@@ -133,6 +132,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 
 .navbar ul li a {
@@ -332,11 +332,6 @@ h6 {
   margin: 0 auto;
 }
 
-.passion-image {
-  width: 250px;
-  border-radius: 25%;
-}
-
 .content-container {
   display: flex;
   flex-direction: column;
@@ -346,18 +341,19 @@ h6 {
 }
 
 .content-container i {
-  font-size: 5rem;
+  font-size: 4.8rem;
   border-radius: 50%;
   margin-bottom: 30px;
   color: var(--accent-color);
 }
 
 .passion-content h4 {
-  margin-bottom: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 23px;
 }
 
 .passion-content p {
-  padding: 10px;
+  padding: 15px;
 }
 
 /* Footer */
@@ -406,10 +402,6 @@ h6 {
   margin-bottom: 10px;
 }
 
-.details i {
-  margin-right: 5px;
-}
-
 /* Form entry fields */
 
 .main-form {
@@ -439,9 +431,14 @@ h6 {
 .main-form input {
   margin-bottom: 5px;
   padding: 10px;
-  background-color: var(--primary-color);
+  background-color: #f8f8f8;
   border-radius: 5px;
 }
+
+/* .main-form input[type="textarea"] {
+  width: 100%;
+  height: 150px;
+} */
 
 .main-form input:focus {
   outline: none;
@@ -456,10 +453,11 @@ h6 {
   background: rgb(19, 180, 182);
   background: linear-gradient(
     90deg,
-    rgba(19, 180, 182, 1) 0%,
-    rgba(10, 204, 153, 1) 100%
+    rgba(10, 204, 153, 1) 0%,
+    rgba(19, 180, 182, 1) 100%
   );
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 /* Bottom Navigation */
@@ -477,4 +475,152 @@ h6 {
 
 .back-to-top i:hover {
   color: rgba(0, 0, 0);
+}
+
+@media screen and (max-width: 960px) {
+  .nav-anchor-utility {
+    height: 75px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-main {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-top: 10px;
+  }
+
+  .showcase-main h2 {
+    font-size: 4rem;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .content-container i {
+    font-size: 3rem;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+  }
+
+  .contact-form-container {
+    width: 100%;
+  }
+
+  .main-form {
+    width: 100%;
+  }
+
+  .details a {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-me-header {
+    height: 65px;
+  }
+
+  .showcase-main h2 {
+    font-size: 3.5rem;
+  }
+
+  .work-grid {
+    padding: 0;
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
+
+  .passion-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .passion-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-container i {
+    font-size: 3rem;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+
+  .passion-content h4 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .passion-content p {
+    padding: 10px;
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  .contact-form-container {
+    width: 100%;
+  }
+
+  .main-form {
+    width: 100%;
+  }
+
+  .back-to-top i {
+    font-size: 3.5rem;
+  }
+
+  .details a {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .tech-stack {
+    font-size: 3rem;
+    margin: 20px 0;
+  }
+
+  .showcase-main h2 {
+    font-size: 2.2rem;
+  }
+
+  .work-header {
+    margin: 0;
+  }
+
+  .main-form h4 {
+    align-self: center;
+    font-size: 1.5rem;
+  }
 }
