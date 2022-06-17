@@ -75,7 +75,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## Live Site
 
-Project Link: [https://github.com/GarrettLockhart/GarrettLockhart.github.io](https://github.com/GarrettLockhart/GarrettLockhart.github.io)
+Project Link: [https://garrettlockhart.github.io/](https://garrettlockhart.github.io/)
 <br />
 <br />
 
