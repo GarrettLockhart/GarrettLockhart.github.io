@@ -174,10 +174,9 @@ h6 {
 
 .showcase-main p {
   font-size: 1.4em;
-  font-weight: 100;
   margin-top: 15px;
   font-weight: bold;
-  color: rgba(255 255 255 / 0.9);
+  color: rgba(255 255 255 / 0.8);
 }
 
 .arrow-down {
@@ -668,9 +667,12 @@ h6 {
   }
 
   .showcase-main h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
+  .showcase-main p {
+    font-size: 1.2rem;
+  }
   .work-header {
     margin: 0;
   }
