@@ -667,6 +667,13 @@ h6 {
     margin-bottom: 10px;
   }
 
+  .showcase-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 70px;
+  }
+
   .work-grid {
     display: grid;
     grid-template-columns: 1fr;
