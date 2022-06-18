@@ -40,6 +40,7 @@ ol[role="list"] {
 /* Smooth Scroll to different sections of page */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 
 /* Set core body defaults */
@@ -76,11 +77,15 @@ select {
   font: inherit;
 }
 
+/* Container utility */
+
 .container {
   width: 80%;
   max-width: 1100px;
   margin: 0 auto;
 }
+
+/* Default styles */
 
 p {
   font-size: 18px;
@@ -101,18 +106,7 @@ h6 {
   text-transform: uppercase;
 }
 
-.active {
-  color: var(--accent-color);
-  border-bottom: 2px solid var(--secondary-color);
-}
-
-/* Utilities */
-
-.nav-anchor-utility {
-  height: 50px;
-}
-
-/* Header */
+/* Top Header and navigation */
 
 .navbar-main {
   display: flex;
@@ -147,7 +141,7 @@ h6 {
   transition: 0.3s ease-in-out;
 }
 
-/* Showcase */
+/* Showcase and hero */
 
 .showcase-main {
   display: flex;
@@ -190,7 +184,7 @@ h6 {
   color: var(--primary-color);
 }
 
-/* About */
+/* About section */
 
 .about-me-header {
   height: 100px;
@@ -258,9 +252,9 @@ h6 {
   color: rgba(0 0 0 / 0.5);
 }
 
-/* Skills */
+/* Skills List */
 
-.section-title {
+.skills-section-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,10 +265,10 @@ h6 {
   justify-content: stretch;
   gap: 30px;
 }
-.section-content {
+.skills-section-content {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin: 20px 0 40px;
 }
 
 .skills-title h5 {
@@ -292,7 +286,7 @@ h6 {
   text-align: center;
 }
 
-/* Work header */
+/* Work section header */
 
 .work-header {
   display: flex;
@@ -306,28 +300,34 @@ h6 {
   font-size: 2em;
 }
 
-/* Cards */
+/* Work Cards */
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 100px;
+  gap: 25px;
+}
+
+.card-1 {
+  grid-column: 1 / 3;
 }
 
 .card {
   display: flex;
   justify-content: center;
-  height: 400px;
-  margin: 30px auto;
+  flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .card img {
-  aspect-ratio: 1 / 0.75;
+  aspect-ratio: 1 / 0.5;
   object-fit: cover;
+  object-position: top;
   width: 100%;
-  border-radius: 20px 0px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .card-content {
@@ -336,10 +336,10 @@ h6 {
   justify-content: flex-start;
   align-items: center;
   background-color: var(--primary-color);
-  aspect-ratio: 1 / 1;
   padding: 15px;
   position: relative;
-  border-radius: 0px 0px 20px 0px;
+  height: 250px;
+  border-radius: 0px 0px 15px 15px;
 }
 
 .card-title {
@@ -352,16 +352,16 @@ h6 {
 
 .btn-container {
   display: flex;
-  flex-direction: row;
+  align-items: flex-end;
   position: absolute;
-  column-gap: 20px;
-  bottom: 30px;
+  bottom: 20px;
 }
 
 .btn-card {
   border: none;
   border-radius: 5px;
   padding: 15px 30px;
+  margin: 0 15px;
   font-weight: bold;
   background-size: 175% auto;
   background-image: linear-gradient(
@@ -383,7 +383,7 @@ h6 {
   background-position: right center;
 }
 
-/* Passion */
+/* Passion section */
 
 .passion-header {
   display: flex;
@@ -435,7 +435,7 @@ h6 {
   padding: 15px;
 }
 
-/* Form icons */
+/* Contact Social icons */
 
 .contact-form-container {
   display: flex;
@@ -470,7 +470,7 @@ h6 {
   margin-bottom: 10px;
 }
 
-/* Form entry fields */
+/* Contact Form entry fields */
 
 .main-form {
   display: flex;
@@ -539,7 +539,7 @@ h6 {
   background-position: right center;
 }
 
-/* Bottom Navigation */
+/* Back to top arrow nav */
 
 .back-to-top {
   text-align: center;
@@ -556,7 +556,7 @@ h6 {
   color: rgba(0, 0, 0);
 }
 
-/* Footer */
+/* Main Footer */
 
 .main-footer {
   display: flex;
@@ -567,7 +567,13 @@ h6 {
   color: var(--primary-color);
 }
 
+/* Responsive Queries */
+
 @media screen and (max-width: 960px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+
   .nav-anchor-utility {
     height: 75px;
     margin-bottom: 10px;
@@ -591,17 +597,19 @@ h6 {
     align-items: center;
   }
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    height: auto;
+  .work-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-1 {
+    grid-column: 1 / 2;
   }
 
   .card-content {
     display: flex;
     justify-content: flex-start;
     position: relative;
-    height: 165px;
+    height: 200px;
     order: 2;
   }
 
@@ -664,6 +672,7 @@ h6 {
     flex-direction: column;
     width: 80%;
     height: auto;
+    margin-bottom: 100px;
   }
 
   .content-container {
@@ -699,12 +708,12 @@ h6 {
     width: 100%;
   }
 
-  .back-to-top i {
-    font-size: 3.5rem;
-  }
-
   .details a {
     font-size: 2.5rem;
+  }
+
+  .back-to-top i {
+    font-size: 3.5rem;
   }
 }
 
@@ -721,16 +730,6 @@ h6 {
     padding-top: 70px;
   }
 
-  .work-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .tech-stack {
-    font-size: 3rem;
-    margin-top: 20px;
-  }
-
   .showcase-main h2 {
     font-size: 2.5rem;
   }
@@ -738,8 +737,22 @@ h6 {
   .showcase-main p {
     font-size: 1.2rem;
   }
+
   .work-header {
     margin: 0;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-description {
+    font-size: 16px;
   }
 
   .main-form h4 {
