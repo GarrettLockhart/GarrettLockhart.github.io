@@ -290,6 +290,7 @@ h6 {
 
 .work-header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100px;
@@ -298,6 +299,10 @@ h6 {
 
 .work-header h3 {
   font-size: 2em;
+}
+
+.work-header p {
+  font-size: 14px;
 }
 
 /* Work Cards */
@@ -579,13 +584,6 @@ h6 {
     margin-bottom: 10px;
   }
 
-  .navbar-main {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    padding-top: 10px;
-  }
-
   .showcase-main h2 {
     font-size: 4rem;
   }
@@ -640,6 +638,13 @@ h6 {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar-main {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-top: 10px;
+  }
+
   .showcase-main h2 {
     font-size: 3.5rem;
   }
@@ -738,6 +743,14 @@ h6 {
     font-size: 1.2rem;
   }
 
+  .tldr-header {
+    width: 100%;
+  }
+
+  .tldr {
+    width: 100%;
+  }
+
   .work-header {
     margin: 0;
   }
@@ -762,5 +775,19 @@ h6 {
 
   .main-form {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    text-align: center;
+  }
+  .btn-card {
+    margin: 0 5px;
+    font-size: 14px;
   }
 }
