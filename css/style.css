@@ -530,7 +530,7 @@ h6 {
 }
 
 .main-form input:focus,
-.textarea-form:focus {
+textarea:focus {
   outline: none;
 }
 
