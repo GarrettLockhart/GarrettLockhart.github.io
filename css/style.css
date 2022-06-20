@@ -148,7 +148,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 94vh;
+  height: 95vh;
   background: radial-gradient(
       circle,
       rgba(255, 255, 255, 0) 0%,
@@ -229,17 +229,17 @@ h6 {
 }
 
 .tldr-header {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: #c9c9c9;
   width: 70%;
-  padding-top: 20px;
   border-radius: 5px 5px 0 0;
 }
 
 .tldr {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  flex-grow: 1;
   width: 70%;
   padding: 0 20px 20px;
   margin-bottom: 30px;
@@ -247,7 +247,8 @@ h6 {
   border-radius: 0 0 5px 5px;
 }
 
-.tldr p {
+.tldr-content {
+  flex: 1 1 100px;
   padding: 10px;
   color: rgba(0 0 0 / 0.5);
 }
@@ -421,11 +422,13 @@ h6 {
 
 .passion-main-container {
   display: flex;
-  flex: 1;
+  justify-content: center;
+  align-items: center;
   height: 500px;
-  width: 80%;
+  width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
+  text-align: center;
 }
 
 .content-container {
@@ -433,7 +436,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  margin: 20px;
 }
 
 .fa-user,
@@ -456,10 +459,6 @@ h6 {
 .passion-content h4 {
   font-size: 1.3rem;
   margin-bottom: 23px;
-}
-
-.passion-content p {
-  padding: 15px;
 }
 
 /* Contact Social icons */
