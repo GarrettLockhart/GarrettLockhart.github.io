@@ -123,20 +123,20 @@ h6 {
   height: 45px;
 }
 
-.navbar ul {
+.navbar-items {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
 }
 
-.navbar ul li a {
+.navbar-links {
   text-transform: uppercase;
   color: var(--primary-color);
   margin: 0 10px;
 }
 
-.navbar ul li a:hover {
+.navbar-links:hover {
   color: var(--accent-color);
   transition: 0.3s ease-in-out;
 }
@@ -160,13 +160,13 @@ h6 {
   color: #fff;
 }
 
-.showcase-main h2 {
+.showcase-title {
   font-size: 5em;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-.showcase-main p {
+.showcase-description {
   font-size: 1.4em;
   margin-top: 15px;
   font-weight: bold;
@@ -217,7 +217,7 @@ h6 {
   margin-bottom: 20px;
 }
 
-.about-me-main p > a {
+.about-me-link {
   color: var(--accent-color);
   text-decoration: underline;
 }
@@ -603,7 +603,7 @@ textarea:focus {
     margin-bottom: 10px;
   }
 
-  .showcase-main h2 {
+  .showcase-title {
     font-size: 4rem;
   }
 
@@ -659,7 +659,7 @@ textarea:focus {
     padding-top: 10px;
   }
 
-  .showcase-main h2 {
+  .showcase-title {
     font-size: 3.5rem;
   }
 
@@ -750,11 +750,11 @@ textarea:focus {
     height: 85vh;
   }
 
-  .showcase-main h2 {
+  .showcase-title {
     font-size: 2.5rem;
   }
 
-  .showcase-main p {
+  .showcase-description {
     font-size: 1.2rem;
   }
 
