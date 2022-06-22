@@ -390,6 +390,7 @@ h6 {
   padding: 15px 25px;
   margin: 0 15px;
   font-weight: bold;
+  color: var(--primary-color);
   background-size: 175% auto;
   background-image: linear-gradient(
     to right,
@@ -399,10 +400,6 @@ h6 {
   );
   box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 10px 0px;
   transition: 500ms;
-}
-
-.btn-card > a {
-  color: var(--primary-color);
 }
 
 .btn-card:hover {
