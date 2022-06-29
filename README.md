@@ -73,5 +73,6 @@ Don't forget to give the project a star! Thanks again!
 Project Link: [https://garrettlockhart.github.io/](https://garrettlockhart.github.io/)
 <br />
 <br />
+<img src="./images/dev-portfolio-card.jpg" alt="Logo">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
