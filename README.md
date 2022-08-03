@@ -44,12 +44,13 @@
 
 ## About The Project
 
-I built this only using HTML & CSS from scratch, and its completely responsive. It's an ever changing site that i will continue to update and work on to improve the interaction and design, as well as update the project section as i create more web apps!
+I built this only using HTML, CSS and JavaScript from scratch, and its completely responsive. It's an ever changing site that i will continue to update and work on to improve the interaction and design, as well as update the project section as i create more web apps!
 
 ### Built With
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 <!-- CONTRIBUTING -->
 
