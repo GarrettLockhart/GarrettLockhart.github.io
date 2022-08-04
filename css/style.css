@@ -590,7 +590,7 @@ textarea:focus {
 
 /* Modal */
 
-#card-img-one:hover {
+.card-img:hover {
   cursor: pointer;
   -webkit-filter: brightness(60%);
   -webkit-transition: all 500ms ease;
@@ -600,7 +600,7 @@ textarea:focus {
   transition: all 500ms eases;
 }
 
-#card-modal-one {
+.card-modal {
   position: fixed;
   top: 0;
   width: 100%;
@@ -613,7 +613,7 @@ textarea:focus {
   cursor: pointer;
 }
 
-#card-modal-one-content {
+.card-modal-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -627,18 +627,22 @@ textarea:focus {
   padding: 20px;
 }
 
-#card-modal-one-content h2 {
-  font-size: 2rem;
+.card-modal-content h2 {
+  font-size: 1.5rem;
   margin-top: 30px;
 }
 
-#card-modal-one-content h3 {
-  font-size: 1.5rem;
+.card-modal-content h3 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-#card-modal-one-content p {
+.card-modal-content p {
   font-size: 1.125rem;
+}
+
+.card-modal-content img {
+  width: 150px;
 }
 
 /* Responsive Queries */
