@@ -590,7 +590,7 @@ textarea:focus {
 
 /* Modal */
 
-.card-img:hover {
+.image-container:hover {
   cursor: pointer;
   -webkit-filter: brightness(60%);
   -webkit-transition: all 500ms ease;

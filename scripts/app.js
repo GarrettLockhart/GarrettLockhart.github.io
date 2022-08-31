@@ -1,10 +1,10 @@
-const cardOne = document.querySelector('#card-img-one');
-const cardTwo = document.querySelector('#card-img-two');
-const cardThree = document.querySelector('#card-img-three');
-const cardFour = document.querySelector('#card-img-four');
-const cardFive = document.querySelector('#card-img-five');
-const cardSix = document.querySelector('#card-img-six');
-const cardSeven = document.querySelector('#card-img-seven');
+const cardOne = document.querySelector('#card-one');
+const cardTwo = document.querySelector('#card-two');
+const cardThree = document.querySelector('#card-three');
+const cardFour = document.querySelector('#card-four');
+const cardFive = document.querySelector('#card-five');
+const cardSix = document.querySelector('#card-six');
+const cardSeven = document.querySelector('#card-seven');
 
 cardOne.addEventListener('click', function (e) {
   const modalOne = document.createElement('div');
