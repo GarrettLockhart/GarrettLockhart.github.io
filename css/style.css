@@ -618,7 +618,7 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80%;
+  height: auto;
   width: 80%;
   color: black;
   background-color: #fff;
@@ -859,7 +859,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 85%;
+    height: auto;
     width: 85%;
     color: black;
     background-color: #fff;
